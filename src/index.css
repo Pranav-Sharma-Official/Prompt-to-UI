@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  @apply min-h-screen transition-colors duration-300;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background-attachment: fixed;
+}
+
+body.dark {
+  @apply bg-gray-900 text-white;
+}
+
+body.light {
+  @apply bg-gray-50 text-gray-900;
+}
+
+.glassmorphism {
+  @apply backdrop-blur-md bg-white/10 dark:bg-slate-900/20 border border-white/20 dark:border-slate-700/30;
+}
+
+.neumorphic {
+  @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
+              -8px -8px 15px rgba(255, 255, 255, 0.05);
+}
+
+.neumorphic-inset {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.gradient-text {
+  @apply font-bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #818cf8, #a855f7);
+}
+
+.gradient-button {
+  @apply text-white font-medium rounded-xl transition-all duration-300;
+  background-image: linear-gradient(to right, #6366f1, #8b5cf6, #a855f7);
+  background-size: 200% auto;
+}
+
+.gradient-button:hover {
+  background-position: right center;
+  @apply shadow-lg;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-400/50 rounded-full;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
