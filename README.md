@@ -25,6 +25,10 @@ You can try out the live demo of Prompt-to-UI here: [Live Demo](https://prompt-t
 - **Vite**: Next-generation frontend tooling for fast development
 - **JavaScript**: Programming language for web interactivity
 
+## 🌐 Live Website
+
+- Watch website in action [here](https://prompt-to-ui.vercel.app/)
+
 ## 🔧 Installation
 
 1. Clone this repository
